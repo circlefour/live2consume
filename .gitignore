@@ -1,0 +1,10 @@
+.env
+*.swp
+/env
+api_guide.md
+beautxt.py
+diary.md
+*.txt
+*.json
+scraping.md
+terms.md
