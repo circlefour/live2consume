@@ -1,5 +1,5 @@
 # ⋆༺𓆩⚔𓆪༻⋆
-# - LIVE TO CONSUME -
+# LIVE TO CONSUME
 i want to consume as much internet content indiscriminately as i can in as short a time frame as i can.
 
 this marks the beginning of that quest.
