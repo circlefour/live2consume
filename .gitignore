@@ -1,7 +1,6 @@
 .env
 *.swp
 *.swo
-*.sql
 /env
 api_guide.md
 beautxt.py
@@ -11,3 +10,5 @@ diary.md
 scraping.md
 terms.md
 *.db
+__pycache__
+**/__pycache__

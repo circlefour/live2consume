@@ -11,4 +11,4 @@ class SearchStringGenerator:
 
     def get_search_string(self):
         word_count = random.randint(self.min_words, self.max_words)
-        return ' '.join(self.random_word() for _ in range(word_count)
+        return ' '.join(self.get_rand_word() for _ in range(word_count))
