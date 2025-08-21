@@ -11,6 +11,9 @@ import googleapiclient.errors
 
 from dotenv import load_dotenv
 
+from db import DB
+from yt_utils import normalize_search_item
+
 load_dotenv()
 api_key = os.getenv("API_KEY")
 
