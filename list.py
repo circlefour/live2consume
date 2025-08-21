@@ -12,6 +12,7 @@ import googleapiclient.errors
 from dotenv import load_dotenv
 
 from db import DB
+from search_string import SearchStringGenerator
 from yt_utils import normalize_search_item
 
 load_dotenv()
@@ -24,9 +25,12 @@ def main():
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey=api_key)
 
+    q_gen = SearchStringGenerator()
+    q_rand = q_gen.get_search_string()
+
     request = youtube.search().list(
        part="snippet",
-       q="random",
+       q=q_rand,
        maxResults=50,
        type="video"
     )
