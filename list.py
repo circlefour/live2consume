@@ -32,10 +32,12 @@ def main():
     )
     response = request.execute()
 
-    print(response)
+    #print(response)
 
-    #for item in response.get("items", []):
-    #    print(f"{item['snippet']['title]} (ID: {item['id']['videoId']})")
+    rows = [normalize_search_item(item) for item in response.get("items", [])]
+
+    db = DB()
+    db.insert_vids(rows)
 
 if __name__ == "__main__":
     main()
