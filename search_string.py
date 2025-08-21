@@ -8,6 +8,8 @@ class SearchStringGenerator:
         with open(word_list) as f:
             self.word_list = [line.rstrip('\n') for line in f if line.strip()]
 
+        print('a collected word from the word txt', word_list[0])
+
     def get_rand_word(self):
         return random.choice(self.word_list)
 

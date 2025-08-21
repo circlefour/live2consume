@@ -10,11 +10,14 @@ class DB:
                 {k: vid[k] for k in vid_keys}
                 for vid in vids_data
                 ]
+        print('what do the clean vids look like', clean_vids[:3])
+        print('inserting them in the db ideally...')
         self.cur.executemany(
             "insert or ignore into vids (video_id, published_at, title, description, channel_title, channel_id) "
             "values (:video_id, :published_at, :title, :description, :channel_title, :channel_id)",
             clean_vids
         )
+        print('bout to commit em to db')
         self.conn.commit()
 
     def get_vid(self, vid_id: str):
