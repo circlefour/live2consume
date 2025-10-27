@@ -12,3 +12,5 @@ terms.md
 *.db
 __pycache__
 **/__pycache__
+*.sh
+toy_db_test.py

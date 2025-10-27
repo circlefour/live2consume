@@ -27,7 +27,7 @@ def main():
 
     db = DB()
 
-    q_gen = SearchStringGenerator()
+    q_gen = SearchStringGenerator(max_words=1)
 
     while True:
         q_rand = q_gen.get_search_string()
