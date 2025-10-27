@@ -30,6 +30,11 @@ class DB:
 
         return row # which should be None if it gets here
 
+    def get_rand_id(self):
+        self.cur.execute('select video_id from vids order by random() limit 1')
+        row = self.cur.fetchone()
+        return row[0] if row else None
+
     # aka mark it as dead
     def kill_vid(self, vid_id: str):
         pass
